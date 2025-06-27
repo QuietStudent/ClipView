@@ -176,8 +176,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Get the screen width and height
         WindowManager windowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
-        int screenWidth = windowManager.getDefaultDisplay().getWidth();
-        int screenHeight = windowManager.getDefaultDisplay().getHeight();
+        android.graphics.Point size = new android.graphics.Point();
+        windowManager.getDefaultDisplay().getRealSize(size);
+        int screenWidth = size.x;
+        int screenHeight = size.y;
 
         // Calculate the aspect ratio of the image
         float imageAspectRatio = (float) originalWidth / originalHeight;
@@ -300,7 +302,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // Clean up listener if locked
+        // Clean up listener if not locked
         if (!isLocked) {
             clipboardManager.removePrimaryClipChangedListener(clipChangedListener);
         }

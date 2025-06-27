@@ -4,12 +4,12 @@
     android:height="24dp"
     android:viewportWidth="24"
     android:viewportHeight="24">
-    <!-- Shadow layer -->
+    <!-- Enhanced shadow layer -->
     <path
-        android:fillColor="#66000000"
-        android:pathData="M17 9V8a5 5 0 0 0-10 0v1h2V8a3 3 0 0 1 6 0v1H7a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-7a3 3 0 0 0-3-3zm0 10H7v-7h10v7z"
-        android:translateX="1"
-        android:translateY="1"/>
+        android:fillColor="#99000000"
+        android:pathData="M18 9V8a5 5 0 0 0-10 0v1h2V8a3 3 0 0 1 6 0v1H8a4 4 0 0 0-4 4v7a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4v-7a4 4 0 0 0-4-4zm0 11H8v-7h10v7z"
+        android:translateX="2"
+        android:translateY="2"/>
     <!-- Main unlock -->
     <path
         android:fillColor="#FFFFFFFF"
