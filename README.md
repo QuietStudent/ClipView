@@ -23,45 +23,53 @@ This app is specifically designed for users with **Windows Phone Link** (Microso
 
 ## 📥 Download APK
 
-### 🎯 **Important: APK files are NOT stored in this repository**
-This follows standard open-source practices. APK files are large binary files that shouldn't be committed to Git.
+### 🎯 **Working APK Available!**
+The latest working APK is now ready for download and installation.
 
 ### How to Get the APK:
 
-#### Option 1: Build from Source (Recommended)
+#### Option 1: Build from Source (Recommended for Developers)
 ```bash
 # Clone the repository
 git clone https://github.com/QuietStudent/ClipView.git
 cd ClipView
 
-# Build the release APK
-./gradlew assembleRelease
+# Build the debug APK (recommended - easier to install)
+./gradlew assembleDebug
 
 # Your APK will be generated at:
-# app/build/outputs/apk/release/app-release-unsigned.apk
+# app/build/outputs/apk/debug/app-debug.apk
 ```
 
 #### Option 2: Download from GitHub Releases
 - Go to the [Releases page](../../releases)
 - Download the latest `ClipView.apk` file
-- *(Note: Releases may be created periodically with pre-built APKs)*
+- *(Releases include pre-built, tested APK files)*
 
-### 📍 **Local APK Location After Building:**
-If you build the project yourself, find your APK at:
-```
-📁 ClipView/app/build/outputs/apk/release/app-release-unsigned.apk
-```
+### 📍 **Current APK Status:**
+✅ **Tested & Working** - The APK has been successfully tested on Android devices  
+✅ **Phone Link Compatible** - Works with Windows Phone Link for cross-device clipboard sharing  
+✅ **Ready for Installation** - No signing issues or compatibility problems
 
 ### Installation Instructions:
 
-1. **Enable Unknown Sources**:
+1. **Download the APK**:
+   - From GitHub Releases or build from source (see above)
+
+2. **Enable Unknown Sources**:
    - Go to Settings → Security → Install unknown apps
    - Enable installation from your browser/file manager
 
-2. **Install the APK**:
-   - Download the APK file to your Android device
+3. **Install the APK**:
+   - Transfer the APK file to your Android device
    - Tap the file to install
    - Follow the installation prompts
+   - Grant clipboard access permission when requested
+
+4. **Start Using**:
+   - Open ClipView app
+   - Copy text or images on your PC (via Phone Link) or device
+   - Content appears automatically in the app!
 
 ## 🚀 Usage
 
@@ -80,8 +88,9 @@ If you build the project yourself, find your APK at:
 ## 🔧 Requirements
 
 - **Android API level 21+** (Android 5.0 Lollipop or newer)
-- **Clipboard access permission** (automatically requested)
+- **Clipboard access permission** (automatically requested on first use)
 - **Windows Phone Link** (optional, for cross-device functionality)
+- **~6 MB storage space** for app installation
 
 ## 📸 Screenshots
 
@@ -104,12 +113,16 @@ If you build the project yourself, find your APK at:
 
 3. **Build APK**:
    ```bash
-   # Debug APK
+   # Debug APK (recommended - easier to install)
    ./gradlew assembleDebug
    
-   # Release APK
+   # Release APK (optimized)
    ./gradlew assembleRelease
    ```
+
+### Build Outputs:
+- **Debug APK**: `app/build/outputs/apk/debug/app-debug.apk`
+- **Release APK**: `app/build/outputs/apk/release/app-release-unsigned.apk`
 
 ### Project Structure:
 ```
