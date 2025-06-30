@@ -23,31 +23,34 @@ This app is specifically designed for users with **Windows Phone Link** (Microso
 
 ## 📥 Download APK
 
-### Ready-to-Install APK Files
-
-You can download the APK files directly from the repository:
-
-**📍 APK Locations:**
-- **Debug APK** (for testing): `app/build/outputs/apk/debug/app-debug.apk`
-- **Release APK** (recommended): `app/build/outputs/apk/release/app-release-unsigned.apk`
+### 🎯 **Important: APK files are NOT stored in this repository**
+This follows standard open-source practices. APK files are large binary files that shouldn't be committed to Git.
 
 ### How to Get the APK:
 
-1. **From GitHub Releases** (Recommended):
-   - Go to the [Releases page](../../releases)
-   - Download the latest `ClipView.apk` file
-   
-2. **Build from Source**:
-   ```bash
-   git clone https://github.com/QuietStudent/ClipView.git
-   cd ClipView
-   ./gradlew assembleRelease
-   ```
-   - Find the APK at: `app/build/outputs/apk/release/app-release-unsigned.apk`
+#### Option 1: Build from Source (Recommended)
+```bash
+# Clone the repository
+git clone https://github.com/QuietStudent/ClipView.git
+cd ClipView
 
-3. **Direct Download from Repository**:
-   - Navigate to `app/build/outputs/apk/debug/` or `app/build/outputs/apk/release/`
-   - Download the `.apk` file directly
+# Build the release APK
+./gradlew assembleRelease
+
+# Your APK will be generated at:
+# app/build/outputs/apk/release/app-release-unsigned.apk
+```
+
+#### Option 2: Download from GitHub Releases
+- Go to the [Releases page](../../releases)
+- Download the latest `ClipView.apk` file
+- *(Note: Releases may be created periodically with pre-built APKs)*
+
+### 📍 **Local APK Location After Building:**
+If you build the project yourself, find your APK at:
+```
+📁 ClipView/app/build/outputs/apk/release/app-release-unsigned.apk
+```
 
 ### Installation Instructions:
 
